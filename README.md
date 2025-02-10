@@ -10,6 +10,11 @@ This is a flutter package that aims to create beautiful, customizable and reusab
 
 ## Usage
 
+<table>
+
+<tr>
+
+<td>
 
 ```dart
 Container_Neo(
@@ -29,10 +34,12 @@ Container_Neo(
                       style: TextStyle(fontSize: 20),),
 ),
 
+
+
 ```
+</td>
+
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+I will be adding some more basic elements such as Cards, Search Bars and Dropdown, in the near future.
