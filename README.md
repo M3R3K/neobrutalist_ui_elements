@@ -40,7 +40,7 @@ Container_Neo(
 </td>
 
 <td>
-  ![Screenshot 2025-02-11 010000](https://github.com/user-attachments/assets/df6c1879-b58e-41a6-982a-d698d195239f)
+<img src="https://github.com/user-attachments/assets/df6c1879-b58e-41a6-982a-d698d195239f" alt="">
 
 </td>
 </tr>
