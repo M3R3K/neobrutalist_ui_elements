@@ -1,7 +1,8 @@
 name: neobrutalist_ui_elements
-description: "A new Flutter package project."
+description: "This is a collection of neobrutalist UI elements for Flutter. The elements are designed to be simple, minimalistic, and easy to use."
 version: 0.0.1
-homepage:
+maintainer: Kerem Abdullahoglu
+repository: https://github.com/M3R3K/neobrutalist_ui_elements
 
 environment:
   sdk: ^3.5.4
