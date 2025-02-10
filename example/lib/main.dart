@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container_Neo(
+                ContainerNeo(
                   animate: true,
                   padding: const EdgeInsets.all(10),
                   defaultPaddingBottom: 5,

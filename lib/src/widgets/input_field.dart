@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class InputField extends StatefulWidget {
   InputField({
     required this.hintText,
@@ -12,9 +13,9 @@ class InputField extends StatefulWidget {
 
   Color bgcolor;
   final String hintText;
-  final TextEditingController? controller;
+  TextEditingController? controller;
   final bool obscureText;
-  final Function? onChanged;
+  Function? onChanged;
 
   @override
   State<InputField> createState() => _InputFieldState();

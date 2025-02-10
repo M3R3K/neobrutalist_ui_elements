@@ -4,8 +4,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-class Container_Neo extends StatefulWidget {
-  Container_Neo(
+class ContainerNeo extends StatefulWidget {
+  ContainerNeo(
       {super.key,
       required this.bgcolor,
       required this.animate,
@@ -28,10 +28,10 @@ class Container_Neo extends StatefulWidget {
   final bool animate;
   final EdgeInsets? padding;
   @override
-  State<Container_Neo> createState() => _Container_NeoState();
+  State<ContainerNeo> createState() => _ContainerNeoState();
 }
 
-class _Container_NeoState extends State<Container_Neo> {
+class _ContainerNeoState extends State<ContainerNeo> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
