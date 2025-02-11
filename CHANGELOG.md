@@ -1,3 +1,4 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* This is the very first release of Neobrutalist UI Elements library.
+* Shadowy Container, Neo Container and Input Field are added.
