@@ -49,3 +49,4 @@ Container_Neo(
 ## Additional information
 
 I will be adding some more basic elements such as Cards, Search Bars and Dropdown, in the near future.
+This package is published on  <a href="https://pub.dev/packages/neobrutalist_ui_elements">pub.dev!</a> 
