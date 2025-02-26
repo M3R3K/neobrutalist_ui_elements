@@ -1,22 +1,29 @@
 import 'package:flutter/material.dart';
 
-class TextContainer extends StatelessWidget {
+class TextContainer extends StatefulWidget {
   const TextContainer({
-    required this.text,
+    required this.textWidget,
     required this.width,
     required this.bgcolor,
     super.key,
   });
-  final String text;
+  final Widget textWidget;
   final double width;
   final Color bgcolor;
 
   @override
+  State<TextContainer> createState() => _TextContainerState();
+}
+
+class _TextContainerState extends State<TextContainer> {
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 200),
+      curve: Curves.linear,
+      width: widget.width,
       decoration: BoxDecoration(
-        color: bgcolor, // Light green background
+        color: widget.bgcolor,
         border: Border.all(color: Colors.black, width: 2), // Black border
         boxShadow: const [
           BoxShadow(
@@ -26,13 +33,7 @@ class TextContainer extends StatelessWidget {
         ],
       ),
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-      child: Text(
-        text,
-        style: const TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
+      child: widget.textWidget,
     );
   }
 }

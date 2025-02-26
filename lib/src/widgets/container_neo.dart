@@ -74,6 +74,13 @@ class _ContainerNeoState extends State<ContainerNeo> {
             widget.defaultPaddingBottom = 0;
             widget.defaultPaddingRight = 0;
           });
+
+          Timer(const Duration(milliseconds: 160), () {
+            setState(() {
+              widget.defaultPaddingBottom = widget.previousPaddingBottom!;
+              widget.defaultPaddingRight = widget.previousPaddingRight!;
+            });
+          });
         }
       },
       onTapUp: (_) {
@@ -82,13 +89,19 @@ class _ContainerNeoState extends State<ContainerNeo> {
             widget.defaultPaddingBottom = widget.previousPaddingBottom!;
             widget.defaultPaddingRight = widget.previousPaddingRight!;
           });
+          Timer(const Duration(milliseconds: 160), () {
+            setState(() {
+              widget.defaultPaddingBottom = widget.previousPaddingBottom!;
+              widget.defaultPaddingRight = widget.previousPaddingRight!;
+            });
+          });
         }
       },
       child: AnimatedContainer(
         padding: EdgeInsets.only(
             right: widget.defaultPaddingBottom,
             bottom: widget.defaultPaddingBottom),
-        duration: const Duration(milliseconds: 80),
+        duration: const Duration(milliseconds: 60),
         curve: Curves.linear,
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 0, 0, 0),
