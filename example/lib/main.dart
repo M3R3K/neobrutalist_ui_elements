@@ -83,7 +83,7 @@ class _MyAppState extends State<MyApp> {
                   controller: null,
                   bgcolor: const Color.fromARGB(255, 220, 215, 215),
                   onChanged: () {
-                    print('InputField changed');
+                    debugPrint('InputField changed');
                   },
                 ),
                 const SizedBox(height: 20),
