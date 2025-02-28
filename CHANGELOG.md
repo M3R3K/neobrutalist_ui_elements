@@ -1,4 +1,4 @@
-## 0.1(28-02-2025)
+## 0.1.0(28-02-2025)
 - Added 3 new widgets `NeoCircleIconButton` , `NeoSegmentedOptions` and `NeoSwitch`
 - Integrated better performance optimizations and bug fixes.
 - Changed the widget constructor requirements that introduce optional fields for widgets.
