@@ -40,10 +40,12 @@ Container_Neo(
 </td>
 
 <td>
-<img src="https://github.com/user-attachments/assets/df6c1879-b58e-41a6-982a-d698d195239f" alt="">
+![demo](https://github.com/user-attachments/assets/0716f520-0a3f-437b-9233-089120c06daa)
+
 
 </td>
 </tr>
+![Uploading demo.gif…]()
 
 
 ## Additional information
