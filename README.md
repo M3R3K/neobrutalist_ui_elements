@@ -40,7 +40,7 @@ Container_Neo(
 </td>
 
 <td>
-![demo](https://github.com/M3R3K/neobrutalist_ui_elements/blob/main/demo.gif)
+<img src="![demo](https://github.com/M3R3K/neobrutalist_ui_elements/blob/main/demo.gif)" alt="">
 
 
 </td>
