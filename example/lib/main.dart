@@ -23,8 +23,29 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
+  void _onSegmentedOptionSelected(int index, BuildContext context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Option $index selected'),
+        duration: const Duration(seconds: 1),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    //generating a list of text widgets for the NeoSegmentedOptions
+    List<Widget> textWidgets = List.generate(
+        3,
+        (index) => Text(
+              'Option $index',
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+                fontSize: 16,
+              ),
+            ));
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -45,17 +66,17 @@ class _MyAppState extends State<MyApp> {
                   bgcolor: const Color.fromARGB(255, 251, 209, 70),
                   borderRadius: 3,
                   onPressed: () {
-                    print('Container_Neo pressed');
+                    debugPrint('Container_Neo pressed');
                   },
                   onLongPressed: () {
-                    print('Container_Neo long pressed');
+                    debugPrint('Container_Neo long pressed');
                   },
                   child: const Text('Neo Container',
                       style: TextStyle(fontSize: 20)),
                 ),
                 const SizedBox(height: 20),
                 InputField(
-                  padding: EdgeInsets.all(6),
+                  padding: const EdgeInsets.all(6),
                   width: 250,
                   hintText: 'Please enter your name',
                   obscureText: false,
@@ -78,7 +99,7 @@ class _MyAppState extends State<MyApp> {
                   onPressed: () => debugPrint("Button pressed!"),
                   icon: const Icon(
                     Icons.add,
-                    size: 30,
+                    size: 60,
                     color: Colors.black,
                   ),
                   backgroundColor: const Color.fromARGB(255, 58, 193, 255),
@@ -98,6 +119,16 @@ class _MyAppState extends State<MyApp> {
                   animationDuration: const Duration(milliseconds: 180),
                 ),
                 const SizedBox(height: 20),
+                NeoSegmentedOptions(
+                  onOptionSelected: _onSegmentedOptionSelected,
+                  width: 100,
+                  height: 50,
+                  borderThickness: 2,
+                  numberOfOptions: 3,
+                  selectedOption: 1,
+                  activeColor: const Color.fromRGBO(168, 166, 255, 1),
+                  optionWidgets: textWidgets,
+                ),
               ],
             ),
           ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NeoCircleIconButon extends StatefulWidget {
-  NeoCircleIconButon({
+  const NeoCircleIconButon({
     super.key,
     this.splashColor,
     this.highlightColor,
@@ -13,8 +13,8 @@ class NeoCircleIconButon extends StatefulWidget {
     required this.onPressed,
   });
   final EdgeInsets padding;
-  double offsetA;
-  double offsetB;
+  final double offsetA;
+  final double offsetB;
   final Icon icon;
   final Color backgroundColor;
   final Color? splashColor;
@@ -37,7 +37,9 @@ class _NeoCircleIconButonState extends State<NeoCircleIconButon> {
             ),
           ],
           color: widget.backgroundColor,
-          border: Border.all(color: Colors.black, width: 2),
+          border: Border.all(
+              color: Colors.black,
+              width: widget.icon.size == null ? 2 : widget.icon.size! / 15),
           shape: BoxShape.circle),
       child: Material(
         color: Colors.transparent,
@@ -46,7 +48,7 @@ class _NeoCircleIconButonState extends State<NeoCircleIconButon> {
           highlightColor: widget.highlightColor,
           customBorder: const CircleBorder(),
           onTap: () {
-            widget.onPressed!();
+            widget.onPressed ?? () {};
           },
           child: Padding(
             padding: widget.padding,
