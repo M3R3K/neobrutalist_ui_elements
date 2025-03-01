@@ -18,20 +18,20 @@ This is a flutter package that aims to create beautiful, customizable and reusab
 
 ```dart
 Container_Neo(
-                  animate: true,
-                  padding: const EdgeInsets.all(10),
-                  defaultPaddingBottom: 5,
-                  defaultPaddingRight: 5,
-                  bgcolor: const Color.fromARGB(255, 251, 209, 70),
-                  borderRadius: 3,
-                  onPressed: () {
-                    print('Container_Neo pressed');
-                  },
-                  onLongPressed: () {
-                    print('Container_Neo long pressed');
-                  },
-                  child: const Text('Neo Container',
-                      style: TextStyle(fontSize: 20),),
+  animate: true,
+  padding: const EdgeInsets.all(10),
+  defaultPaddingBottom: 5,
+  defaultPaddingRight: 5,
+  bgcolor: const Color.fromARGB(255, 251, 209, 70),
+  borderRadius: 3,
+  onPressed: () {
+    print('Container_Neo pressed');
+  },
+  onLongPressed: () {
+    print('Container_Neo long pressed');
+  },
+  child: const Text('Neo Container',
+      style: TextStyle(fontSize: 20),),
 ),
 
 
