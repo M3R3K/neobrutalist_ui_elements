@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class InputField extends StatefulWidget {
-  const InputField({
+  InputField({
     required this.hintText,
     required this.width,
     required this.obscureText,
@@ -15,7 +15,7 @@ class InputField extends StatefulWidget {
     super.key,
   });
 
-  final Color bgcolor;
+  Color bgcolor;
   final EdgeInsets? padding;
   final double width;
   final String hintText;
@@ -31,12 +31,9 @@ class InputField extends StatefulWidget {
 }
 
 class _InputFieldState extends State<InputField> {
-  late Color currentBgColor;
-
   @override
   void initState() {
     super.initState();
-    currentBgColor = widget.bgcolor;
   }
 
   @override
@@ -44,7 +41,7 @@ class _InputFieldState extends State<InputField> {
     return Container(
       padding: widget.padding ?? const EdgeInsets.all(6),
       decoration: BoxDecoration(
-        color: currentBgColor,
+        color: widget.bgcolor,
         border: Border.all(
           color: const Color.fromARGB(255, 0, 0, 0),
           width: widget.width / 100,
@@ -53,9 +50,9 @@ class _InputFieldState extends State<InputField> {
       width: widget.width,
       child: TextField(
         onChanged: (String value) {
-          if (currentBgColor != Colors.white) {
+          if (widget.bgcolor != Colors.white) {
             setState(() {
-              currentBgColor = Colors.white;
+              widget.bgcolor = Colors.white;
             });
           }
           widget.onChanged?.call(value);

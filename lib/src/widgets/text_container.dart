@@ -19,7 +19,7 @@ class _TextContainerState extends State<TextContainer> {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 200),
       curve: Curves.linear,
       width: widget.width,
       decoration: BoxDecoration(

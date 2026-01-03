@@ -71,7 +71,7 @@ class _MyAppState extends State<MyApp> {
                       style: TextStyle(fontSize: 20)),
                 ),
                 const SizedBox(height: 20),
-                const InputField(
+                InputField(
                   keyboardType: TextInputType.emailAddress,
                   hintText: "Hint",
                   hintStyle: TextStyle(color: Colors.blueAccent),

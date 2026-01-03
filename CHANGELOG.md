@@ -1,3 +1,7 @@
+## 0.2.1(03-01-2026)
+- Minor bugfixes
+
+
 ## 0.2.0(27-12-2025)
 - Updated the gradle version of the example project.
 - ContainerNeo Press animation causing page layout to shift has been fixed. Animation logic overhauled and is no longer gets stuck on pressed state.
