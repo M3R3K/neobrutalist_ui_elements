@@ -1,76 +1,57 @@
 import 'package:flutter/material.dart';
 
-class InputField extends StatefulWidget {
-  InputField({
+class InputField extends StatelessWidget {
+  const InputField({
+    super.key,
     required this.hintText,
     required this.width,
     required this.obscureText,
-    this.controller,
     required this.bgcolor,
+    this.controller,
     this.onChanged,
     this.padding,
     this.keyboardType,
     this.textStyle,
     this.hintStyle,
-    super.key,
+    this.onTap,
   });
 
-  Color bgcolor;
+  final Color bgcolor;
   final EdgeInsets? padding;
   final double width;
   final String hintText;
   final TextEditingController? controller;
   final bool obscureText;
   final Function(String)? onChanged;
+  final Function()? onTap;
   final TextInputType? keyboardType;
   final TextStyle? textStyle;
   final TextStyle? hintStyle;
 
   @override
-  State<InputField> createState() => _InputFieldState();
-}
-
-class _InputFieldState extends State<InputField> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Container(
-      padding: widget.padding ?? const EdgeInsets.all(6),
+      padding: padding ?? const EdgeInsets.all(6),
+      width: width,
       decoration: BoxDecoration(
-        color: widget.bgcolor,
+        color: bgcolor,
         border: Border.all(
-          color: const Color.fromARGB(255, 0, 0, 0),
-          width: widget.width / 100,
+          color: Colors.black,
+          width: width / 100,
         ),
       ),
-      width: widget.width,
       child: TextField(
-        onChanged: (String value) {
-          if (widget.bgcolor != Colors.white) {
-            setState(() {
-              widget.bgcolor = Colors.white;
-            });
-          }
-          widget.onChanged?.call(value);
-        },
-        controller: widget.controller,
-        obscureText: widget.obscureText,
-        autocorrect: !widget.obscureText,
-        enableSuggestions: !widget.obscureText,
-        keyboardType: widget.keyboardType,
-
-        // Apply the input text style
-        style: widget.textStyle ??
-            const TextStyle(color: Colors.black, fontSize: 16),
-
+        onTap: onTap,
+        controller: controller,
+        obscureText: obscureText,
+        autocorrect: !obscureText,
+        enableSuggestions: !obscureText,
+        keyboardType: keyboardType,
+        onChanged: onChanged,
+        style: textStyle ?? const TextStyle(color: Colors.black, fontSize: 16),
         decoration: InputDecoration(
-          hintText: widget.hintText,
-          // Apply the hint text style
-          hintStyle: widget.hintStyle ?? const TextStyle(color: Colors.grey),
+          hintText: hintText,
+          hintStyle: hintStyle ?? const TextStyle(color: Colors.grey),
           border: InputBorder.none,
         ),
       ),
