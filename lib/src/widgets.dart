@@ -1,6 +1,11 @@
-export 'widgets/container_neo.dart';
-export 'widgets/input_field.dart';
-export 'widgets/text_container.dart';
+export 'widgets/neo_container.dart';
+export 'widgets/neo_input_field.dart';
+export 'widgets/neo_text_container.dart';
 export 'widgets/neo_circle_icon_button.dart';
 export 'widgets/neo_switch.dart';
 export 'widgets/neo_segmented_options.dart';
+export 'widgets/neo_dialog.dart';
+export 'widgets/neo_toast.dart';
+export 'widgets/neo_window.dart';
+export 'widgets/neo_slider.dart';
+export 'widgets/neo_loading_indicator.dart';

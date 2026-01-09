@@ -1,3 +1,14 @@
+## 1.0.0(09-01-2026)
+- **BREAKING CHANGE**: Renamed `ContainerNeo` to `NeoContainer` for consistency with naming convention
+- **BREAKING CHANGE**: Renamed `InputField` to `NeoInputField` for consistency with naming convention
+- **BREAKING CHANGE**: Renamed `TextContainer` to `NeoTextContainer` for consistency with naming convention
+- Added `NeoLoadingIndicator` widget - a new loading indicator in neobrutalist style with customizable size, color, stroke width, shadow offset, border radius, and animation duration
+- Added `NeoDialog` widget - a neobrutalist-style dialog with customizable title, content, background color, and action buttons
+- Added `NeoToast` widget - a toast notification component with slide and fade animations, customizable colors, and optional action buttons
+- Added `NeoWindow` widget - a Windows 95-style window component with title bar, close button, and customizable content
+- Added `NeoSlider` widget - a neobrutalist slider with customizable track colors, thumb size, shadow offset, and value indicator
+- Added comprehensive showcase page in example app demonstrating all widgets in a single scrollable view
+
 ## 0.2.1(03-01-2026)
 - Minor bugfixes
 

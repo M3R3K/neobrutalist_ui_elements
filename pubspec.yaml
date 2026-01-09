@@ -1,6 +1,6 @@
 name: neobrutalist_ui_elements
 description: "This is a collection of neobrutalist UI elements for Flutter. The elements are designed to be simple, minimalistic, and easy to use."
-version: 0.2.1
+version: 1.0.0
 maintainer: Kerem Abdullahoglu
 repository: https://github.com/M3R3K/neobrutalist_ui_elements
 
@@ -15,7 +15,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^6.0.0
 
 flutter:
 

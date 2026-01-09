@@ -1,6 +1,29 @@
 import 'package:flutter/material.dart';
 
+/// A neobrutalist circular icon button with press animations and shadow effects.
+///
+/// This widget creates a circular button with:
+/// - Hard black shadow offset
+/// - Bold black border
+/// - Smooth press animations
+/// - Customizable splash and highlight colors
+///
+/// Example:
+/// ```dart
+/// NeoCircleIconButton(
+///   padding: const EdgeInsets.all(12),
+///   icon: const Icon(Icons.add, size: 40, color: Colors.black),
+///   backgroundColor: const Color(0xFF3AC1FF),
+///   offset: 4,
+///   onPressed: () {
+///     print('Button pressed');
+///   },
+/// )
+/// ```
 class NeoCircleIconButton extends StatefulWidget {
+  /// Creates a neobrutalist circular icon button.
+  ///
+  /// The [padding], [icon], [backgroundColor], [offset], and [onPressed] parameters are required.
   const NeoCircleIconButton({
     super.key,
     this.splashColor,
@@ -8,16 +31,36 @@ class NeoCircleIconButton extends StatefulWidget {
     required this.padding,
     required this.icon,
     required this.backgroundColor,
-    required this.offset, // Simplified to one offset value for diagonal movement
+    required this.offset,
     required this.onPressed,
   });
 
+  /// The padding around the icon.
   final EdgeInsets padding;
-  final double offset; // The distance it pops out
+
+  /// The offset distance for the shadow effect.
+  ///
+  /// This determines how much the button "pops out" from its shadow.
+  /// Higher values create a more pronounced 3D effect.
+  final double offset;
+
+  /// The icon to display in the button.
   final Icon icon;
+
+  /// The background color of the button.
   final Color backgroundColor;
+
+  /// The splash color when the button is pressed.
+  ///
+  /// If null, defaults to a semi-transparent black.
   final Color? splashColor;
+
+  /// The highlight color when the button is pressed.
+  ///
+  /// If null, defaults to a semi-transparent grey.
   final Color? highlightColor;
+
+  /// Callback function called when the button is pressed.
   final Function()? onPressed;
 
   @override

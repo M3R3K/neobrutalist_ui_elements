@@ -4,9 +4,17 @@ This is a flutter package that aims to create beautiful, customizable and reusab
 
 ## Features
 
-- Main container element with customizable animations and shapes.
-- Input field with controller support.
-- Text container with Neo Brutalistic shadow
+- **NeoContainer** - Main container element with customizable animations, shapes, and shadow effects
+- **NeoInputField** - Input field with controller support and customizable styling
+- **NeoTextContainer** - Text container with Neo Brutalistic shadow
+- **NeoCircleIconButton** - Circular icon button with press animations
+- **NeoSwitch** - Toggle switch with customizable colors and animations
+- **NeoSegmentedOptions** - Segmented control for multiple options
+- **NeoDialog** - Neobrutalist-style dialog with customizable content and buttons
+- **NeoToast** - Toast notification component with slide and fade animations
+- **NeoWindow** - Windows 95-style window component with title bar
+- **NeoSlider** - Slider with customizable track colors, thumb size, and value indicator
+- **NeoLoadingIndicator** - Loading indicator with customizable size, color, and animation duration
 
 ## Usage
 
@@ -17,25 +25,20 @@ This is a flutter package that aims to create beautiful, customizable and reusab
 <td>
 
 ```dart
-Container_Neo(
+NeoContainer(
+  offset: 3,
   animate: true,
-  padding: const EdgeInsets.all(10),
-  defaultPaddingBottom: 5,
-  defaultPaddingRight: 5,
-  bgcolor: const Color.fromARGB(255, 251, 209, 70),
-  borderRadius: 3,
+  padding: const EdgeInsets.all(16),
+  bgcolor: const Color(0xFFFFD93D),
+  borderRadius: 8,
   onPressed: () {
-    print('Container_Neo pressed');
+    print('NeoContainer pressed');
   },
-  onLongPressed: () {
-    print('Container_Neo long pressed');
-  },
-  child: const Text('Neo Container',
-      style: TextStyle(fontSize: 20),),
+  child: const Text(
+    'Neo Container',
+    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+  ),
 ),
-
-
-
 ```
 </td>
 
@@ -50,5 +53,4 @@ Container_Neo(
 
 ## Additional information
 
-I will be adding some more basic elements such as Cards, Search Bars and Dropdown, in the near future. <br>
 This package is published on  <a href="https://pub.dev/packages/neobrutalist_ui_elements">pub.dev!</a> 

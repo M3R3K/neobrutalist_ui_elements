@@ -1,3 +1,3 @@
-library neobrutalist_ui_elements;
+library;
 
 export './src/widgets.dart';
