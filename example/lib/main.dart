@@ -56,7 +56,7 @@ class _ShowcasePageState extends State<ShowcasePage> {
       hasButton: true,
       buttonMessage: 'View',
       icon: Icons.info,
-      height: 100,
+      height: 70,
       borderRadius: 10,
       borderThickness: 2,
       borderChin: 4,
