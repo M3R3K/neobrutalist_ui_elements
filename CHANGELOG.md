@@ -1,3 +1,6 @@
+## 1.0.4
+- Updated README.md
+
 ## 1.0.3(11-01-2026)
 - Minor fixes
 

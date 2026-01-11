@@ -30,19 +30,13 @@ hard shadows, bold borders, vibrant colors, and geometric
 shapes that reject the minimalist trends of modern UI design.
 </td>
 
-<td>
-
-
+</tr>
 
 <img src="https://github.com/user-attachments/assets/46f7cc7a-07b0-403e-8f64-72c90a2be170" width="200">
 
 
 
-
-
-
-</td>
-</tr>
+</table>
 <table>
 
 
@@ -118,7 +112,7 @@ NeoTextContainer(
 
 <td>
 
-<img width="200" alt="text_container" src="https://github.com/user-attachments/assets/3bfdde57-4b97-47d0-8033-4eb51c97d1b5" />
+<img alt="text_container" src="https://github.com/user-attachments/assets/3bfdde57-4b97-47d0-8033-4eb51c97d1b5" />
 
 
 </td>
@@ -144,7 +138,7 @@ NeoCircleIconButton(
 </td>
 
 <td>
-<img width="200" alt="circleicon" src="https://github.com/user-attachments/assets/a9651d33-1f34-46ee-8fac-dabfbbb4ca17" />
+<img alt="circleicon" src="https://github.com/user-attachments/assets/a9651d33-1f34-46ee-8fac-dabfbbb4ca17" />
 
 </td>
 
@@ -176,7 +170,7 @@ NeoSwitch(
 </td>
 
 <td>
-<img width="200" alt="switch" src="https://github.com/user-attachments/assets/7e033927-c7ca-45b4-8b63-3ce23cdf781c" />
+<img alt="switch" src="https://github.com/user-attachments/assets/7e033927-c7ca-45b4-8b63-3ce23cdf781c" />
 
 </td>
 
@@ -213,7 +207,7 @@ NeoSegmentedOptions(
 </td>
 
 <td>
-<img width="200" alt="segmented_options" src="https://github.com/user-attachments/assets/7957e91d-97bd-45a4-8830-b06c9f49379c" />
+<img alt="segmented_options" src="https://github.com/user-attachments/assets/7957e91d-97bd-45a4-8830-b06c9f49379c" />
 
 
 </td>
@@ -246,7 +240,7 @@ NeoSlider(
 </td>
 
 <td>
-<img width="200" alt="slider" src="https://github.com/user-attachments/assets/0c5169f8-c8a3-4afc-9a1c-903e2170b045" />
+<img alt="slider" src="https://github.com/user-attachments/assets/0c5169f8-c8a3-4afc-9a1c-903e2170b045" />
 
 </td>
 
@@ -267,7 +261,7 @@ NeoLoadingIndicator(
 </td>
 
 <td>
-<img width="200" alt="loading_indicator" src="https://github.com/user-attachments/assets/b5a1ddb0-2f8b-4462-9b61-b3ccc3296f82" />
+<img alt="loading_indicator" src="https://github.com/user-attachments/assets/b5a1ddb0-2f8b-4462-9b61-b3ccc3296f82" />
 
 </td>
 </tr>
@@ -295,7 +289,7 @@ NeoDialog(
 </td>
 
 <td>
-<img width="200" alt="dialog" src="https://github.com/user-attachments/assets/fdfa9257-4bfc-4ada-a278-887297251eba" />
+<img alt="dialog" src="https://github.com/user-attachments/assets/fdfa9257-4bfc-4ada-a278-887297251eba" />
 
 
 </td>
@@ -326,7 +320,7 @@ ToastNeoService.show(
 </td>
 
 <td>
-<img width="200" alt="toast" src="https://github.com/user-attachments/assets/bae181a2-2aad-40f3-acc5-e8f30c0cdc25" />
+<img alt="toast" src="https://github.com/user-attachments/assets/bae181a2-2aad-40f3-acc5-e8f30c0cdc25" />
 
 </td>
 
@@ -357,7 +351,7 @@ NeoWindow95(
 </td>
 
 <td>
-<img width="200" alt="window" src="https://github.com/user-attachments/assets/363c15ca-89c7-43ab-a34d-8c359afc2765" />
+<img src="https://github.com/user-attachments/assets/363c15ca-89c7-43ab-a34d-8c359afc2765" />
 
 </td>
 
