@@ -29,8 +29,8 @@ class ToastNeo extends StatelessWidget {
     required this.backgroundColor,
     required this.message,
     required this.hasButton,
-    required this.animation, // Added animation parameter
-    required this.onClose, // Added callback
+    required this.animation,
+    required this.onClose,
     this.height,
     this.onPressed,
     this.shadowColor,
@@ -40,6 +40,9 @@ class ToastNeo extends StatelessWidget {
     this.borderRadius,
     this.borderThickness,
     this.borderChin,
+    this.textStyle,
+    this.buttonColor,
+    this.position,
   });
 
   /// The background color of the toast notification.
@@ -81,12 +84,26 @@ class ToastNeo extends StatelessWidget {
   /// Callback function called when the close button is pressed or the toast is dismissed.
   final VoidCallback onClose;
 
+  /// Custom text style for the message text.
+  final TextStyle? textStyle;
+
+  /// Color of the action button. Defaults to amber if not provided.
+  final Color? buttonColor;
+
+  /// Position of the toast (for animation direction). Defaults to bottom.
+  final ToastPosition? position;
+
   @override
   Widget build(BuildContext context) {
-    // Slide transition: starts from 100 pixels below its position
+    // Slide transition: direction depends on position
+    final slideBegin =
+        (position ?? ToastPosition.bottom) == ToastPosition.bottom
+            ? const Offset(0, 1) // Slide up from bottom
+            : const Offset(0, -1); // Slide down from top
+
     final offsetAnimation = Tween<Offset>(
-      begin: const Offset(0, 1),
-      end: const Offset(0, 0),
+      begin: slideBegin,
+      end: Offset.zero,
     ).animate(CurvedAnimation(
       parent: animation,
       curve: Curves
@@ -129,17 +146,19 @@ class ToastNeo extends StatelessWidget {
                 Expanded(
                   child: Text(
                     message,
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 16,
-                    ),
+                    style: textStyle ??
+                        const TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w900,
+                          fontSize: 16,
+                        ),
                   ),
                 ),
                 if (hasButton) ...[
+                  SizedBox(width: 5),
                   NeoContainer(
                     onPressed: onPressed,
-                    bgcolor: Colors.amber,
+                    bgcolor: buttonColor ?? Colors.amber,
                     animate: true,
                     borderRadius: 4,
                     offset: 2,
@@ -175,23 +194,67 @@ class ToastNeo extends StatelessWidget {
 /// - Hard black shadow effect
 /// - Customizable colors
 /// - Optional action button
-/// - Auto-dismiss after 3 seconds
+/// - Auto-dismiss after customizable duration
 ///
 /// Example:
 /// ```dart
-/// NeoToastService.show(
+/// ToastNeoService.show(
 ///   context,
 ///   'This is a neobrutalist toast!',
 /// );
+///
+/// // With customization:
+/// ToastNeoService.show(
+///   context,
+///   'Custom toast!',
+///   backgroundColor: Colors.blue,
+///   hasButton: true,
+///   icon: Icons.info,
+///   duration: Duration(seconds: 5),
+/// );
 /// ```
-class NeoToastService {
+class ToastNeoService {
   /// Shows a neobrutalist toast notification.
   ///
-  /// The toast will automatically dismiss after 3 seconds.
+  /// The toast will automatically dismiss after the specified [duration]
+  /// (defaults to 3 seconds).
   ///
   /// [context] - The BuildContext to show the toast in.
   /// [message] - The message text to display in the toast.
-  static void show(BuildContext context, String message) {
+  /// [backgroundColor] - The background color of the toast. Defaults to high-vis green.
+  /// [hasButton] - Whether to show an action button. Defaults to true.
+  /// [buttonMessage] - The text on the action button. Defaults to "View".
+  /// [icon] - Optional icon to display at the start of the message.
+  /// [height] - The height of the toast. Defaults to 65.
+  /// [borderRadius] - The border radius of the toast. Defaults to 4.
+  /// [borderThickness] - The thickness of the border. Defaults to 2.
+  /// [borderChin] - The offset of the shadow effect. Defaults to 4.
+  /// [shadowColor] - The color of the shadow. Defaults to black.
+  /// [onPressed] - Callback when the action button is pressed.
+  /// [duration] - How long the toast stays visible before auto-dismissing. Defaults to 3 seconds.
+  /// [position] - Where to position the toast. Defaults to bottom.
+  /// [textStyle] - Custom text style for the message.
+  /// [buttonColor] - Color of the action button. Defaults to amber.
+  /// [animationDuration] - Duration of the show/hide animation. Defaults to 600ms.
+  static void show(
+    BuildContext context,
+    String message, {
+    Color? backgroundColor,
+    bool? hasButton,
+    String? buttonMessage,
+    IconData? icon,
+    double? height,
+    double? borderRadius,
+    double? borderThickness,
+    double? borderChin,
+    Color? shadowColor,
+    Function? onPressed,
+    Duration? duration,
+    ToastPosition position = ToastPosition.bottom,
+    TextStyle? textStyle,
+    Color? buttonColor,
+    Duration? animationDuration,
+  }) {
     final overlayState = Overlay.of(context);
     late OverlayEntry overlayEntry;
 
@@ -199,6 +262,21 @@ class NeoToastService {
     overlayEntry = OverlayEntry(
       builder: (context) => _ToastAnimateWrapper(
         message: message,
+        backgroundColor: backgroundColor,
+        hasButton: hasButton,
+        buttonMessage: buttonMessage,
+        icon: icon,
+        height: height,
+        borderRadius: borderRadius,
+        borderThickness: borderThickness,
+        borderChin: borderChin,
+        shadowColor: shadowColor,
+        onPressed: onPressed,
+        duration: duration,
+        position: position,
+        textStyle: textStyle,
+        buttonColor: buttonColor,
+        animationDuration: animationDuration,
         onDismiss: () => overlayEntry.remove(),
       ),
     );
@@ -207,11 +285,53 @@ class NeoToastService {
   }
 }
 
+/// Position where the toast notification should appear.
+enum ToastPosition {
+  /// Toast appears at the top of the screen.
+  top,
+
+  /// Toast appears at the bottom of the screen.
+  bottom,
+}
+
 class _ToastAnimateWrapper extends StatefulWidget {
   final String message;
+  final Color? backgroundColor;
+  final bool? hasButton;
+  final String? buttonMessage;
+  final IconData? icon;
+  final double? height;
+  final double? borderRadius;
+  final double? borderThickness;
+  final double? borderChin;
+  final Color? shadowColor;
+  final Function? onPressed;
+  final Duration? duration;
+  final ToastPosition position;
+  final TextStyle? textStyle;
+  final Color? buttonColor;
+  final Duration? animationDuration;
   final VoidCallback onDismiss;
 
-  const _ToastAnimateWrapper({required this.message, required this.onDismiss});
+  const _ToastAnimateWrapper({
+    required this.message,
+    this.backgroundColor,
+    this.hasButton,
+    this.buttonMessage,
+    this.icon,
+    this.height,
+    this.borderRadius,
+    this.borderThickness,
+    this.borderChin,
+    this.shadowColor,
+    this.onPressed,
+    this.duration,
+    this.position = ToastPosition.bottom,
+    this.textStyle,
+    this.buttonColor,
+    this.animationDuration,
+    required this.onDismiss,
+  });
 
   @override
   State<_ToastAnimateWrapper> createState() => _ToastAnimateWrapperState();
@@ -226,13 +346,13 @@ class _ToastAnimateWrapperState extends State<_ToastAnimateWrapper>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 600),
+      duration: widget.animationDuration ?? const Duration(milliseconds: 600),
     );
 
     _controller.forward();
 
-    // Auto-dismiss after 3 seconds
-    Future.delayed(const Duration(seconds: 3), () {
+    // Auto-dismiss after specified duration
+    Future.delayed(widget.duration ?? const Duration(seconds: 3), () {
       if (mounted) _dismiss();
     });
   }
@@ -251,15 +371,27 @@ class _ToastAnimateWrapperState extends State<_ToastAnimateWrapper>
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: 40, // Position at bottom
+      bottom: widget.position == ToastPosition.bottom ? 40 : null,
+      top: widget.position == ToastPosition.top ? 40 : null,
       left: 0,
       right: 0,
       child: ToastNeo(
         message: widget.message,
-        backgroundColor: const Color(0xFF00FF90), // High-vis Green
-        hasButton: true,
+        backgroundColor: widget.backgroundColor ?? const Color(0xFF00FF90),
+        hasButton: widget.hasButton ?? true,
+        buttonMessage: widget.buttonMessage,
+        icon: widget.icon,
+        height: widget.height,
+        borderRadius: widget.borderRadius,
+        borderThickness: widget.borderThickness,
+        borderChin: widget.borderChin,
+        shadowColor: widget.shadowColor,
+        onPressed: widget.onPressed,
         animation: _controller,
         onClose: _dismiss,
+        textStyle: widget.textStyle,
+        buttonColor: widget.buttonColor,
+        position: widget.position,
       ),
     );
   }

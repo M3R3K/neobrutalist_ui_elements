@@ -51,9 +51,18 @@ class _ShowcasePageState extends State<ShowcasePage> {
   }
 
   void _showToast() {
-    NeoToastService.show(
+    ToastNeoService.show(
+      backgroundColor: Colors.limeAccent,
+      hasButton: true,
+      buttonMessage: 'View',
+      icon: Icons.info,
+      height: 100,
+      borderRadius: 10,
+      borderThickness: 2,
+      borderChin: 4,
+      shadowColor: Colors.black,
       context,
-      'This is a neobrutalist toast!',
+      'This is a toast!',
     );
   }
 
@@ -174,7 +183,6 @@ class _ShowcasePageState extends State<ShowcasePage> {
                     borderRadius: 8,
                     onPressed: () {
                       _showSnackBar('ContainerNeo pressed!');
-                      _scrollToBottom();
                     },
                     child: const Text(
                       'Clickable Neo Container',
@@ -277,12 +285,7 @@ class _ShowcasePageState extends State<ShowcasePage> {
                     backgroundColor: const Color(0xFF3AC1FF),
                     offset: 4,
                     onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Add button pressed!'),
-                          duration: Duration(milliseconds: 500),
-                        ),
-                      );
+                      _showSnackBar("Add button pressed!");
                     },
                   ),
                   const SizedBox(width: 24),
@@ -293,12 +296,7 @@ class _ShowcasePageState extends State<ShowcasePage> {
                     backgroundColor: const Color(0xFFFF6B6B),
                     offset: 3,
                     onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Favorite button pressed!'),
-                          duration: Duration(milliseconds: 500),
-                        ),
-                      );
+                      _showSnackBar("Favorite button pressed!");
                     },
                   ),
                   const SizedBox(width: 24),
@@ -309,12 +307,7 @@ class _ShowcasePageState extends State<ShowcasePage> {
                     backgroundColor: const Color(0xFF4ECDC4),
                     offset: 4,
                     onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Settings button pressed!'),
-                          duration: Duration(milliseconds: 500),
-                        ),
-                      );
+                      _showSnackBar("Settings button pressed!");
                     },
                   ),
                 ],
@@ -333,12 +326,7 @@ class _ShowcasePageState extends State<ShowcasePage> {
                       setState(() {
                         _switchValue = value;
                       });
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text('Switch: $value'),
-                          duration: const Duration(milliseconds: 1500),
-                        ),
-                      );
+                      _showSnackBar('$_switchValue');
                     },
                     defaultState: _switchValue,
                     width: 110,
@@ -665,12 +653,7 @@ class _ShowcasePageState extends State<ShowcasePage> {
                   titleBarColor: const Color(0xFF3AC1FF),
                   width: 400,
                   onClose: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Window closed!'),
-                        duration: Duration(milliseconds: 1500),
-                      ),
-                    );
+                    _showSnackBar('Window closed!');
                   },
                   child: const Padding(
                     padding: EdgeInsets.all(16),
