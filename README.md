@@ -49,7 +49,11 @@ NeoContainer(
 </td>
 
 <td>
-<img src="https://raw.githubusercontent.com/M3R3K/neobrutalist_ui_elements/refs/heads/main/demo.gif" alt="">
+
+
+
+https://github.com/user-attachments/assets/f0040d58-6156-4c05-a81d-3748c85f0e4a
+
 
 
 
