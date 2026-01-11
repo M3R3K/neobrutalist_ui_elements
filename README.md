@@ -22,16 +22,14 @@ This is a flutter package that aims to create beautiful, customizable and reusab
 
 <td>
 
-**Neobrutalist UI Elements** is a comprehensive Flutter package that brings the bold, unapologetic aesthetic of neobrutalism to mobile and web applications. This design philosophy embraces raw, honest design with hard shadows, bold borders, vibrant colors, and geometric shapes that reject the minimalist trends of modern UI design. The package provides developers with a complete set of customizable widgets that make it easy to create striking, memorable user interfaces that stand out from the crowd.
-
-The package is built with Flutter developers in mind, offering a collection of 11 carefully crafted widgets that cover the essential UI components needed for modern applications. Each widget is fully customizable, allowing developers to adjust colors, sizes, animations, and styling to match their specific design requirements. Whether you're building a mobile app, a web application, or a desktop interface, these widgets provide consistent neobrutalist styling across all platforms. The design language emphasizes functionality and clarity through bold visual statements, making interfaces not just usable, but visually engaging and distinctive.
+**Neobrutalist UI Elements** is a comprehensive Flutter package that brings the bold, unapologetic aesthetic of neobrutalism to mobile and web applications. This design philosophy embraces raw, honest design with hard shadows, bold borders, vibrant colors, and geometric shapes that reject the minimalist trends of modern UI design.
 </td>
 
 <td>
 
 
 
-<img src="https://github.com/user-attachments/assets/46f7cc7a-07b0-403e-8f64-72c90a2be170" width="200">
+<img src="https://github.com/user-attachments/assets/46f7cc7a-07b0-403e-8f64-72c90a2be170" width="600">
 
 
 
@@ -115,7 +113,7 @@ NeoTextContainer(
 
 <td>
 
-<img alt="text_container" src="https://github.com/user-attachments/assets/3bfdde57-4b97-47d0-8033-4eb51c97d1b5" />
+<img width="200" alt="text_container" src="https://github.com/user-attachments/assets/3bfdde57-4b97-47d0-8033-4eb51c97d1b5" />
 
 
 </td>
@@ -141,7 +139,7 @@ NeoCircleIconButton(
 </td>
 
 <td>
-<img alt="circleicon" src="https://github.com/user-attachments/assets/a9651d33-1f34-46ee-8fac-dabfbbb4ca17" />
+<img width="200" alt="circleicon" src="https://github.com/user-attachments/assets/a9651d33-1f34-46ee-8fac-dabfbbb4ca17" />
 
 </td>
 
@@ -173,7 +171,7 @@ NeoSwitch(
 </td>
 
 <td>
-<img alt="switch" src="https://github.com/user-attachments/assets/7e033927-c7ca-45b4-8b63-3ce23cdf781c" />
+<img width="200" alt="switch" src="https://github.com/user-attachments/assets/7e033927-c7ca-45b4-8b63-3ce23cdf781c" />
 
 </td>
 
@@ -210,7 +208,7 @@ NeoSegmentedOptions(
 </td>
 
 <td>
-<img alt="segmented_options" src="https://github.com/user-attachments/assets/7957e91d-97bd-45a4-8830-b06c9f49379c" />
+<img width="200" alt="segmented_options" src="https://github.com/user-attachments/assets/7957e91d-97bd-45a4-8830-b06c9f49379c" />
 
 
 </td>
@@ -243,7 +241,7 @@ NeoSlider(
 </td>
 
 <td>
-<img alt="slider" src="https://github.com/user-attachments/assets/0c5169f8-c8a3-4afc-9a1c-903e2170b045" />
+<img width="200" alt="slider" src="https://github.com/user-attachments/assets/0c5169f8-c8a3-4afc-9a1c-903e2170b045" />
 
 </td>
 
@@ -264,7 +262,7 @@ NeoLoadingIndicator(
 </td>
 
 <td>
-<img alt="loading_indicator" src="https://github.com/user-attachments/assets/b5a1ddb0-2f8b-4462-9b61-b3ccc3296f82" />
+<img width="200" alt="loading_indicator" src="https://github.com/user-attachments/assets/b5a1ddb0-2f8b-4462-9b61-b3ccc3296f82" />
 
 </td>
 </tr>
@@ -292,7 +290,7 @@ NeoDialog(
 </td>
 
 <td>
-<img alt="dialog" src="https://github.com/user-attachments/assets/fdfa9257-4bfc-4ada-a278-887297251eba" />
+<img width="200" alt="dialog" src="https://github.com/user-attachments/assets/fdfa9257-4bfc-4ada-a278-887297251eba" />
 
 
 </td>
@@ -323,7 +321,7 @@ ToastNeoService.show(
 </td>
 
 <td>
-<img alt="toast" src="https://github.com/user-attachments/assets/bae181a2-2aad-40f3-acc5-e8f30c0cdc25" />
+<img width="200" alt="toast" src="https://github.com/user-attachments/assets/bae181a2-2aad-40f3-acc5-e8f30c0cdc25" />
 
 </td>
 
@@ -354,7 +352,7 @@ NeoWindow95(
 </td>
 
 <td>
-<img alt="window" src="https://github.com/user-attachments/assets/363c15ca-89c7-43ab-a34d-8c359afc2765" />
+<img width="200" alt="window" src="https://github.com/user-attachments/assets/363c15ca-89c7-43ab-a34d-8c359afc2765" />
 
 </td>
 
