@@ -22,14 +22,19 @@ This is a flutter package that aims to create beautiful, customizable and reusab
 
 <td>
 
-**Neobrutalist UI Elements** is a comprehensive Flutter package that brings the bold, unapologetic aesthetic of neobrutalism to mobile and web applications. This design philosophy embraces raw, honest design with hard shadows, bold borders, vibrant colors, and geometric shapes that reject the minimalist trends of modern UI design.
+**Neobrutalist UI Elements** is a comprehensive 
+Flutter package that brings the bold, unapologetic 
+aesthetic of neobrutalism to mobile and web applications. 
+This design philosophy embraces raw, honest design with 
+hard shadows, bold borders, vibrant colors, and geometric 
+shapes that reject the minimalist trends of modern UI design.
 </td>
 
 <td>
 
 
 
-<img src="https://github.com/user-attachments/assets/46f7cc7a-07b0-403e-8f64-72c90a2be170" width="200">
+<img src="https://github.com/user-attachments/assets/46f7cc7a-07b0-403e-8f64-72c90a2be170" width="300">
 
 
 
