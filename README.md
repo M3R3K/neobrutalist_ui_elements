@@ -29,7 +29,7 @@ This is a flutter package that aims to create beautiful, customizable and reusab
 
 
 
-<img src="https://github.com/user-attachments/assets/46f7cc7a-07b0-403e-8f64-72c90a2be170" width="600">
+<img src="https://github.com/user-attachments/assets/46f7cc7a-07b0-403e-8f64-72c90a2be170" width="200">
 
 
 
