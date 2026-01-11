@@ -1,3 +1,6 @@
+## 1.0.1(09-01-2026)
+- Fixed documentation in README.md
+
 ## 1.0.0(09-01-2026)
 - **BREAKING CHANGE**: Renamed `ContainerNeo` to `NeoContainer` for consistency with naming convention
 - **BREAKING CHANGE**: Renamed `InputField` to `NeoInputField` for consistency with naming convention

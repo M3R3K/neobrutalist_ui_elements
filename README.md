@@ -26,19 +26,25 @@ This is a flutter package that aims to create beautiful, customizable and reusab
 
 ```dart
 NeoContainer(
-  offset: 3,
-  animate: true,
-  padding: const EdgeInsets.all(16),
-  bgcolor: const Color(0xFFFFD93D),
-  borderRadius: 8,
-  onPressed: () {
-    print('NeoContainer pressed');
-  },
-  child: const Text(
-    'Neo Container',
-    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-  ),
-),
+                    offset: 3,
+                    animate: true,
+                    padding: const EdgeInsets.all(16),
+                    bgcolor: const Color(0xFFFFD93D),
+                    borderRadius: 8,
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text('ContainerNeo pressed!'),
+                          duration: Duration(milliseconds: 1500),
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      'Clickable Neo Container',
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                  ),
 ```
 </td>
 
