@@ -1,3 +1,6 @@
+## 1.0.3(11-01-2026)
+- Minor fixes
+
 ## 1.0.2(11-01-2026)
 - **Enhanced NeoToast widget**: Made `ToastNeoService.show()` fully customizable with new optional parameters:
   - Added `backgroundColor`, `shadowColor`, `buttonColor` for color customization
