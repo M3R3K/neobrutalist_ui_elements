@@ -1,3 +1,16 @@
+## 1.0.2(11-01-2026)
+- **Enhanced NeoToast widget**: Made `ToastNeoService.show()` fully customizable with new optional parameters:
+  - Added `backgroundColor`, `shadowColor`, `buttonColor` for color customization
+  - Added `textStyle` for custom message text styling
+  - Added `icon` parameter for optional icon display
+  - Added `height`, `borderRadius`, `borderThickness`, `borderChin` for size and styling control
+  - Added `hasButton`, `buttonMessage`, `onPressed` for action button customization
+  - Added `duration` parameter to control auto-dismiss timing (defaults to 3 seconds)
+  - Added `position` parameter with `ToastPosition` enum (top/bottom) for toast placement
+  - Added `animationDuration` for custom animation timing
+  - Renamed `NeoToastService` to `ToastNeoService` for consistency
+- Backward compatibility maintained - simple `show()` call still works with defaults
+
 ## 1.0.1(09-01-2026)
 - Fixed documentation in README.md
 
