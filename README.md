@@ -34,7 +34,7 @@ shapes that reject the minimalist trends of modern UI design.
 
 
 
-<img src="https://github.com/user-attachments/assets/46f7cc7a-07b0-403e-8f64-72c90a2be170" width="300">
+<img src="https://github.com/user-attachments/assets/46f7cc7a-07b0-403e-8f64-72c90a2be170" width="200">
 
 
 
